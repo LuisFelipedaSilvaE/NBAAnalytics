@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -32,7 +33,8 @@ public class operacoesController {
 	@FXML
 	private static Button btnCadastrar;
 	
-	public static void inserirAtleta() {
+	@FXML
+	public static void inserirAtleta(ActionEvent event) {
 	     String sql = "INSERT INTO atletas_tb (at_id, at_nome, at_sobrenome, at_idade, at_posicao, at_equipe) VALUES (?, ?, ?, ?, ?)";
 	     try (Connection conexao = Conexao.conectar();
 	          PreparedStatement pstmt = conexao.prepareStatement(sql)) {

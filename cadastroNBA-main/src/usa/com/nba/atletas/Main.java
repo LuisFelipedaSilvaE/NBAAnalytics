@@ -17,7 +17,6 @@ public class Main extends Application {
 			palcoPrincipal.setScene(cenario);
 			palcoPrincipal.setTitle("LAAnalytics");
 			palcoPrincipal.getIcons().add(new Image(getClass().getResourceAsStream("/usa/com/nba/atletas/NBA_logo.png")));
-			palcoPrincipal.setMaximized(true);
 			palcoPrincipal.show();
 		} catch(Exception e) {
 			e.printStackTrace();
